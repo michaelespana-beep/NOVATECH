@@ -1,0 +1,260 @@
+/* ===== 1. ESTILOS GENERALES ===== */
+body {
+    background-color: #eef2f7;
+    color: #333333;
+    font-family: "Segoe UI", Arial, sans-serif;
+    font-size: 16px;
+    line-height: 1.6;
+    margin: 0;
+    text-align: left;
+}
+
+/* ===== 2. ENCABEZADOS ===== */
+h1 {
+    color: #ffffff;
+    background-color: #0b1f3a;
+    text-align: center;
+    padding: 15px;
+    border: 4px solid #00a8e8;
+    border-radius: 12px;
+}
+
+h2 {
+    color: #0b1f3a;
+    background-color: #d6ecf8;
+    text-align: center;
+    padding: 10px;
+    border-style: solid;
+    border-color: #00a8e8;
+    border-width: 2px;
+    border-radius: 8px;
+}
+
+h3 {
+    color: #00608a;
+    text-align: center;
+    margin: 12px 0 6px 0;
+}
+
+/* ===== CABECERA ===== */
+.cabecera {
+    background-color: #0b1f3a;
+    text-align: center;
+    padding: 20px 10px 10px 10px;
+}
+
+.logo {
+    color: #ffffff;
+    font-size: 40px;
+    font-weight: bold;
+    letter-spacing: 4px;
+}
+
+.logo span {
+    color: #00a8e8;
+}
+
+.logo-img {
+    display: block;
+    height: 80px;
+    margin: 0 auto 10px auto;
+    border-radius: 12px;
+}
+
+.eslogan {
+    color: #b8d4e8;
+    font-style: italic;
+    margin: 5px 0 0 0;
+}
+
+/* ===== 4. NAVEGACIÓN / MENÚ ===== */
+.menu {
+    background-color: #00608a;
+    padding: 10px;
+}
+
+.menu ul {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 15px;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.menu a {
+    color: #ffffff;
+    background-color: #0b1f3a;
+    text-decoration: none;
+    padding: 8px 18px;
+    border: 2px solid #00a8e8;
+    border-radius: 20px;
+    display: block;
+    transition: background-color 0.3s;
+}
+
+.menu a:hover {
+    background-color: #00a8e8;
+    color: #0b1f3a;
+}
+
+/* ===== SECCIONES ===== */
+.seccion {
+    background-color: #ffffff;
+    max-width: 1000px;
+    margin: 25px auto;
+    padding: 20px 30px;
+    border: 1px solid #c5d3e0;
+    border-radius: 10px;
+}
+
+/* ===== 5. PRODUCTOS Y SERVICIOS ===== */
+.contenedor-tarjetas {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+}
+
+.tarjeta {
+    width: 280px;
+    padding: 12px;
+    background-color: #f8fbfd;
+    border: 3px solid #00a8e8;
+    border-radius: 15px;
+    text-align: center;
+}
+
+.tarjeta img {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+.descripcion {
+    color: #555555;
+    font-size: 14px;
+    text-align: justify;
+}
+
+.precio {
+    color: #ffffff;
+    background-color: #0b1f3a;
+    font-weight: bold;
+    padding: 5px;
+    border-radius: 20px;
+}
+
+/* ===== CONTACTO ===== */
+.datos-contacto {
+    font-style: normal;
+    text-align: center;
+}
+
+.datos-contacto a {
+    color: #00608a;
+}
+
+/* ===== 6. FORMULARIOS ===== */
+fieldset {
+    border: 2px solid #00608a;
+    border-radius: 10px;
+    margin-bottom: 20px;
+    padding: 15px 20px;
+    background-color: #f8fbfd;
+}
+
+legend {
+    color: #ffffff;
+    background-color: #00608a;
+    font-weight: bold;
+    padding: 4px 14px;
+    border-radius: 15px;
+}
+
+label {
+    display: block;
+    margin-top: 12px;
+    font-weight: bold;
+    color: #0b1f3a;
+}
+
+label.opcion {
+    display: inline-block;
+    font-weight: normal;
+    margin-right: 18px;
+}
+
+.etiqueta {
+    font-weight: bold;
+    color: #0b1f3a;
+    margin: 12px 0 0 0;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="tel"],
+input[type="number"],
+input[type="date"],
+input[type="file"],
+select,
+textarea {
+    width: 100%;
+    max-width: 450px;
+    padding: 8px;
+    margin-top: 4px;
+    border: 2px solid #9db8cc;
+    border-radius: 6px;
+    font-family: inherit;
+    font-size: 15px;
+    box-sizing: border-box;
+}
+
+input:focus,
+select:focus,
+textarea:focus {
+    border-color: #00a8e8;
+    outline: none;
+    background-color: #eaf6fd;
+}
+
+/* Botones diferenciados */
+.botones {
+    margin-top: 20px;
+    text-align: center;
+}
+
+button {
+    font-size: 16px;
+    font-weight: bold;
+    padding: 10px 30px;
+    margin: 0 8px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+.btn-registrar {
+    background-color: #1e8e3e;
+    color: #ffffff;
+}
+
+.btn-limpiar {
+    background-color: #c0392b;
+    color: #ffffff;
+}
+
+/* ===== 7. PIE DE PÁGINA ===== */
+.pie {
+    background-color: #0b1f3a;
+    color: #b8d4e8;
+    text-align: center;
+    padding: 15px;
+    margin-top: 30px;
+}
+
+.pie p {
+    margin: 0;
+}

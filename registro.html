@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registro de clientes | NOVATECH</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+    <header class="cabecera">
+        <img src="img/logo.jpg" alt="Logotipo de NOVATECH" class="logo-img">
+        <span class="logo">NOVA<span>TECH</span></span>
+        <p class="eslogan">Tecnología que impulsa tu mundo</p>
+    </header>
+
+    <nav class="menu">
+        <ul>
+            <li><a href="index.html">Inicio</a></li>
+            <li><a href="index.html#productos">Productos</a></li>
+            <li><a href="index.html#servicios">Servicios</a></li>
+            <li><a href="registro.html">Registro de clientes</a></li>
+            <li><a href="index.html#contacto">Contacto</a></li>
+        </ul>
+    </nav>
+
+    <main>
+        <section class="seccion">
+            <h1>Registro de clientes</h1>
+            <p>Completa tus datos para recibir promociones y servicios personalizados.
+               Los campos obligatorios están validados por el navegador.</p>
+
+            <form action="#" method="post" enctype="multipart/form-data">
+
+                <!-- 1. DATOS PERSONALES -->
+                <fieldset>
+                    <legend>Datos personales</legend>
+
+                    <label for="cedula">Cédula:</label>
+                    <input type="text" id="cedula" name="cedula"
+                           required minlength="10" maxlength="10"
+                           pattern="[0-9]{10}" inputmode="numeric"
+                           placeholder="0912345678"
+                           title="Ingrese los 10 dígitos de la cédula">
+
+                    <label for="nombres">Nombres:</label>
+                    <input type="text" id="nombres" name="nombres"
+                           required minlength="3" maxlength="40"
+                           pattern="[A-Za-zÁÉÍÓÚáéíóúÑñ ]+"
+                           title="Solo letras, entre 3 y 40 caracteres">
+
+                    <label for="apellidos">Apellidos:</label>
+                    <input type="text" id="apellidos" name="apellidos"
+                           required minlength="3" maxlength="40"
+                           pattern="[A-Za-zÁÉÍÓÚáéíóúÑñ ]+"
+                           title="Solo letras, entre 3 y 40 caracteres">
+
+                    <label for="fechaNacimiento">Fecha de nacimiento:</label>
+                    <input type="date" id="fechaNacimiento" name="fechaNacimiento" required>
+
+                    <label for="edad">Edad:</label>
+                    <input type="number" id="edad" name="edad"
+                           required min="18" max="100">
+
+                    <p class="etiqueta">Género:</p>
+                    <label class="opcion">
+                        <input type="radio" name="genero" value="masculino" required> Masculino
+                    </label>
+                    <label class="opcion">
+                        <input type="radio" name="genero" value="femenino"> Femenino
+                    </label>
+                    <label class="opcion">
+                        <input type="radio" name="genero" value="otro"> Otro
+                    </label>
+                </fieldset>
+
+                <!-- 2. DATOS DE CONTACTO -->
+                <fieldset>
+                    <legend>Datos de contacto</legend>
+
+                    <label for="correo">Correo electrónico:</label>
+                    <input type="email" id="correo" name="correo" required
+                           placeholder="ejemplo@correo.com">
+
+                    <label for="telefono">Teléfono:</label>
+                    <input type="tel" id="telefono" name="telefono"
+                           required pattern="[0-9]{10}" maxlength="10"
+                           placeholder="0991234567"
+                           title="Ingrese 10 dígitos">
+
+                    <label for="direccion">Dirección:</label>
+                    <textarea id="direccion" name="direccion" rows="3"
+                              required minlength="10" maxlength="150"></textarea>
+
+                    <label for="ciudad">Ciudad:</label>
+                    <select id="ciudad" name="ciudad" required>
+                        <option value="">-- Seleccione una ciudad --</option>
+                        <option value="guayaquil">Guayaquil</option>
+                        <option value="quito">Quito</option>
+                        <option value="cuenca">Cuenca</option>
+                        <option value="manta">Manta</option>
+                        <option value="ambato">Ambato</option>
+                    </select>
+                </fieldset>
+
+                <!-- 3. PREFERENCIAS DEL CLIENTE -->
+                <fieldset>
+                    <legend>Preferencias del cliente</legend>
+
+                    <p class="etiqueta">Productos de interés:</p>
+                    <label class="opcion">
+                        <input type="checkbox" name="productos" value="computadoras"> Computadoras
+                    </label>
+                    <label class="opcion">
+                        <input type="checkbox" name="productos" value="impresoras"> Impresoras
+                    </label>
+                    <label class="opcion">
+                        <input type="checkbox" name="productos" value="accesorios"> Accesorios
+                    </label>
+                    <label class="opcion">
+                        <input type="checkbox" name="productos" value="celulares"> Celulares
+                    </label>
+
+                    <p class="etiqueta">Servicios de interés:</p>
+                    <label class="opcion">
+                        <input type="checkbox" name="servicios" value="mantenimiento"> Mantenimiento
+                    </label>
+                    <label class="opcion">
+                        <input type="checkbox" name="servicios" value="reparacion"> Reparación
+                    </label>
+                    <label class="opcion">
+                        <input type="checkbox" name="servicios" value="soporte"> Soporte técnico
+                    </label>
+
+                    <label for="foto">Fotografía del cliente (opcional):</label>
+                    <input type="file" id="foto" name="foto" accept="image/*">
+                </fieldset>
+
+                <!-- 4. CONFIRMACIÓN -->
+                <fieldset>
+                    <legend>Confirmación</legend>
+
+                    <label class="opcion">
+                        <input type="checkbox" name="terminos" required>
+                        Acepto los términos y condiciones
+                    </label>
+
+                    <div class="botones">
+                        <button type="submit" class="btn-registrar">Registrar</button>
+                        <button type="reset" class="btn-limpiar">Limpiar</button>
+                    </div>
+                </fieldset>
+
+            </form>
+        </section>
+    </main>
+
+    <footer class="pie">
+        <p>&copy; 2026 NOVATECH. Todos los derechos reservados.</p>
+    </footer>
+
+</body>
+</html>
